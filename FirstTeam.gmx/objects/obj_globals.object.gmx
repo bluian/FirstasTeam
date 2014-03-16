@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//This inits and sets all values needed for game play without initing some of these values, when the player or enemy makes a check it will crash game
+            <string>///This inits and sets all values needed for game play without initing some of these values, when the player or enemy makes a check it will crash game
 
 global.playerhp = 5;
 global.enemyhp = 30;
@@ -36,6 +36,7 @@ global.playerWithinStriking = false;
 global.damageDone = false;
 global.stunEnemy = false;
 global.stunCoolDown = false;
+global.playerCanHeavyAttack = true;
 
 </string>
           </argument>
