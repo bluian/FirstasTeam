@@ -95,6 +95,35 @@ for(i=0;i&lt;3;i+=1){
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Stun cooldown timer
+
+{
+
+    global.stunCoolDown = false;
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -415,6 +444,20 @@ if (x != xprevious or y != yprevious)
             global.playerCanHeavyAttack = false;
             //alarm for cooldown on player attack
             alarm[1] = 30;
+        }
+        
+     if (mouse_check_button(mb_right) &amp;&amp; (global.playerCanAttack == true) &amp;&amp; global.playerWithinStriking == true &amp;&amp; global.stunCoolDown == false) {
+    
+            //sets global stun value for enemy to true
+            global.stunEnemy = true;
+            //starts countdown for stun on enemy
+            alarm[2] = 90;
+            //sets damage done to true for waking enemy
+            global.damageDone = true;
+            //sets global stun value
+            global.stunCoolDown = true;
+            //starts cooldown on stun attack
+            alarm[2] = 180;
         }
 
         

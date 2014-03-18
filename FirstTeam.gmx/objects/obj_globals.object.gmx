@@ -182,7 +182,7 @@ global.playerCanHeavyAttack = true;
 
 
 
-    //makes sure the enemy exists
+    /*//makes sure the enemy exists
     if(instance_exists(obj_enemy)) {
         //checks to make sure the player has range, attack not on cooldown, and if the attack button was pressed
         if (mouse_check_button(mb_left) &amp;&amp; (global.playerCanAttack == true) &amp;&amp; global.playerWithinStriking == true) {
@@ -211,9 +211,9 @@ global.playerCanHeavyAttack = true;
             //sets global stun value
             global.stunCoolDown = true;
             //starts cooldown on stun attack
-            alarm[3] = 180;
-        }
-    }
+            alarm[3] = 180; 
+        } 
+    }*/
 
     if(instance_exists(obj_enemy)) {
         
@@ -221,7 +221,8 @@ global.playerCanHeavyAttack = true;
             
             
                     //damages player                
-                    global.playerhp-=1;
+                   // global.playerhp-=1;
+                    other.stamina -=1;
                     //sets values to disallow attacking by the enemy
                     global.enemyCanAttack = false;
                     global.enemyWithinStriking = false;
