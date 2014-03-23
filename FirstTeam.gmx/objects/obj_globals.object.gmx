@@ -177,12 +177,12 @@ global.playerCanHeavyAttack = true;
           <argument>
             <kind>1</kind>
             <string>///Player and Enemy Attack Checks
-
+/*
 {
 
 
 
-    /*//makes sure the enemy exists
+    //makes sure the enemy exists
     if(instance_exists(obj_enemy)) {
         //checks to make sure the player has range, attack not on cooldown, and if the attack button was pressed
         if (mouse_check_button(mb_left) &amp;&amp; (global.playerCanAttack == true) &amp;&amp; global.playerWithinStriking == true) {
@@ -213,7 +213,7 @@ global.playerCanHeavyAttack = true;
             //starts cooldown on stun attack
             alarm[3] = 180; 
         } 
-    }*/
+    }
 
     if(instance_exists(obj_enemy)) {
         
@@ -235,6 +235,7 @@ global.playerCanHeavyAttack = true;
 
 
 }
+*/
 </string>
           </argument>
         </arguments>
