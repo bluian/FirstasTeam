@@ -37,6 +37,8 @@ global.damageDone = false;
 global.stunEnemy = false;
 global.stunCoolDown = false;
 global.playerCanHeavyAttack = true;
+global.playerTarget = "";
+global.enemyWithinStrikingRange = false;
 
 </string>
           </argument>

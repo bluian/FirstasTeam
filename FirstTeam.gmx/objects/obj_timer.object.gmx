@@ -75,6 +75,7 @@ global.time = timer / room_speed;
             <kind>1</kind>
             <string>draw_text(400,10, "Time");
 draw_text(500,10, string(global.time));
+draw_text(600,10, string(global.playerTarget));
 </string>
           </argument>
         </arguments>

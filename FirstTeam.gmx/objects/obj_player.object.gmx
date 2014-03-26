@@ -404,7 +404,7 @@ if (place_meeting(x,y,obj_solid))
 //makes sure the enemy exists
     if(instance_exists(obj_enemy)) {
         //checks to make sure the player has range, attack not on cooldown, and if the attack button was pressed
-        if (mouse_check_button(mb_left) &amp;&amp; (global.playerCanAttack == true) &amp;&amp; global.playerWithinStriking == true) {
+      /*  if (mouse_check_button(mb_left) &amp;&amp; (global.playerCanAttack == true) &amp;&amp; global.playerWithinStriking == true) {
     
             //damages enemy
             global.enemyhp-=1;
@@ -418,7 +418,7 @@ if (place_meeting(x,y,obj_solid))
             alarm[0] = 10;
         
         }
-        
+        */
         
     
         //checks to make sure the player has range, attack not on cooldown, and if the attack button was pressed
