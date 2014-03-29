@@ -427,14 +427,15 @@ if (place_meeting(x,y,obj_solid))
    
      if (place_meeting(x,y,obj_enemy) &amp;&amp; keyboard_check(vk_space) &amp;&amp; (global.playerCanAttack == true))
         {
-            global.enemyhp -= player_strength;
+            target = global.playerTarget;
+            target.hp -= 20;
             global.damageDone = true;
             //Cannot hold down the attack button
             mouse_clear(vk_space);
             //sets player attack to false to start the attack cooldown
             global.playerCanHeavyAttack = false;
             //alarm for cooldown on player attack
-            alarm[1] = 30;
+            alarm[1] = 10;
         }
         
      if (mouse_check_button(mb_right) &amp;&amp; (global.playerCanAttack == true) &amp;&amp; global.playerWithinStriking == true &amp;&amp; global.stunCoolDown == false) {
@@ -813,6 +814,12 @@ draw_text(200,100,going_to_starve_in);
 
 draw_text(20, 115, "Stength");
 draw_text(200, 115, player_strength);
+
+draw_text(20, 130, "Target");
+draw_text(200, 130, global.playerTarget);
+
+
+
 </string>
           </argument>
         </arguments>
