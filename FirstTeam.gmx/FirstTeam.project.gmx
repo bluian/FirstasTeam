@@ -29,6 +29,7 @@
     <sprite>sprites\spr_projectile_launcher_passive</sprite>
     <sprite>sprites\spr_projectile_launcher_active</sprite>
     <sprite>sprites\spr_alchemist</sprite>
+    <sprite>sprites\spr_rogue</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tiles</background>
@@ -86,6 +87,7 @@
     <object>objects\obj_projectile_launcher_sw</object>
     <object>objects\obj_player_spawn</object>
     <object>objects\obj_alchemist</object>
+    <object>objects\obj_enemyRogue</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

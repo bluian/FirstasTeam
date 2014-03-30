@@ -318,46 +318,6 @@ if (x != xprevious or y != yprevious)
       </action>
       <action>
         <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>scr_playerattack</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -402,7 +362,7 @@ if (place_meeting(x,y,obj_solid))
 
 {
 //makes sure the enemy exists
-    if(instance_exists(obj_enemy)) {
+    //if(instance_exists(obj_enemy)) {
         //checks to make sure the player has range, attack not on cooldown, and if the attack button was pressed
       /*  if (mouse_check_button(mb_left) &amp;&amp; (global.playerCanAttack == true) &amp;&amp; global.playerWithinStriking == true) {
     
@@ -425,17 +385,18 @@ if (place_meeting(x,y,obj_solid))
         
 
    
-     if (place_meeting(x,y,obj_enemy) &amp;&amp; keyboard_check(vk_space) &amp;&amp; (global.playerCanAttack == true))
+     if (place_meeting(x,y,global.playerTarget) &amp;&amp; keyboard_check(vk_space) &amp;&amp; (global.playerCanAttack == true))
         {
             target = global.playerTarget;
             target.hp -= 20;
             global.damageDone = true;
             //Cannot hold down the attack button
-            mouse_clear(vk_space);
+            keyboard_clear(vk_space);
             //sets player attack to false to start the attack cooldown
             global.playerCanHeavyAttack = false;
             //alarm for cooldown on player attack
             alarm[1] = 10;
+            scr_playerattack();
         }
         
      if (mouse_check_button(mb_right) &amp;&amp; (global.playerCanAttack == true) &amp;&amp; global.playerWithinStriking == true &amp;&amp; global.stunCoolDown == false) {
@@ -456,7 +417,7 @@ if (place_meeting(x,y,obj_solid))
         
         
     }
-}
+//}
 </string>
           </argument>
         </arguments>
@@ -508,32 +469,6 @@ if (place_meeting(x,y,obj_solid))
 if (place_meeting(x,y,obj_exit))
 {
     room_goto_next();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_enemy">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (place_meeting(x,y,obj_enemy) &amp;&amp; keyboard_check(vk_space))
-{
-    other.hp -= player_strength;
 }
 </string>
           </argument>
